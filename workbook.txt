@@ -1,0 +1,75 @@
+http://pirzul-dor.co.il/
+
+- To generate WA send message -
+
+
+/*
+var yourNumber = "אנא צור איתי קשר"
+var yourMessage = "+972507974127"
+
+// %20 mean space in link
+// If you already had an array then you just join them with '%20'
+// easy right
+
+function sendWhastappMsg() {
+  number = yourNumber
+  message = yourMessage.split(' ').join('%20');
+
+  return 'https://api.whatsapp.com/send?phone=' + number + '&text=%20' + message;
+
+}
+
+sendWhastappMsg();
+
+*/
+
+For running this project use - 
+
+ node -v
+v14.21.0
+
+Firebase: 
+
+
+npm install firebase
+
+///////////////////
+
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDayJwvFEfo4_GAM20eL5s22ENFzda_i3k",
+  authDomain: "pizza-whatsapp.firebaseapp.com",
+  projectId: "pizza-whatsapp",
+  storageBucket: "pizza-whatsapp.appspot.com",
+  messagingSenderId: "692237400692",
+  appId: "1:692237400692:web:d2180639cfb4b114f1ef21",
+  measurementId: "G-YQF0EEN80H"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+////////////////////////////////////
+
+import { collection, getDocs } from "firebase/firestore"; 
+
+const querySnapshot = await getDocs(collection(db, "users"));
+querySnapshot.forEach((doc) => {
+
+  console.log(`${doc.id} => ${doc.data()}`);
+});
+
+
+//// 
+
+You have to copy the html manually to the dist
