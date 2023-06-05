@@ -21,13 +21,14 @@
     "style-loader": "^3.3.3",
     "webpack": "^5.84.1",
     "webpack-cli": "^5.1.1",
-    "webpack-dev-server": "^4.15.0"
+    "webpack-dev-server": "^4.15.0",
+    "webpack-merge": "^5.9.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node server/server.js",
     "start-dev": "webpack-dev-server --mode=development",
-    "build": "webpack --mode production",
+    "build": "set NODE_ENV=production && webpack --mode=production",
     "stage": "node server/server.js"
   },
   "repository": {
