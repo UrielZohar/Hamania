@@ -1,0 +1,165 @@
+
+body {
+    background-color: #F7F7F7;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    padding: 5px;
+}
+
+.container {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .section-label {
+        position: sticky;
+    }
+}
+
+.row {
+
+}
+
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.img-wrapper-fit {
+    display: inline-block;
+    margin: 0 auto;
+    width: auto;
+}
+
+.section-top-static {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #F7F7F7;
+    z-index: 9;
+    padding-bottom: 50px;
+
+    .wa-icon {
+        width: 150px;
+    }
+
+
+    .wa-icon.has-selected-items {
+
+        width: 150px;
+
+        img {
+            transform-origin: left top;
+            animation: scale 1000ms ease-in-out forwards infinite;
+        }
+
+        @keyframes scale {
+            from {
+                transform: scale(0.9)
+            }
+            to {
+              transform: scale(1);
+            }
+        }
+    }
+
+    .logo-brand {
+        width: 150px;
+
+        img {
+            width: 150px;
+        }
+    }
+}
+
+
+.section-1 {
+    .logo-image {
+        max-width: 100%;
+    }
+    
+}
+
+.section-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.head-of-list {
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+
+    &-item {
+        width: 500px;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+
+        .select-weight {
+            width: 100px;
+        }
+
+        label.item-label {
+            display: inline-block;
+            width: 255px;
+            
+            .label-text {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.list {
+    display: flex;
+
+    .price {
+        width: 100px;
+        display: inline-block;
+    }
+
+}
+ 
+.mobile-mode {
+
+    .list {
+
+        width: 100%;
+
+        .list-item {
+            display: inline-block;
+            font-size: 14px;
+            width: 100%;
+
+            .item-label {
+                width: 215px;
+            }
+
+            .price {
+                width: 70px;
+            }
+
+            .select-weight {
+                width: 55px;
+            }
+        }
+    }
+
+}
+
+
