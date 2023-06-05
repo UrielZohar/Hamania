@@ -7,9 +7,9 @@ const isProduction = process.env.NODE_ENV==='production';
 module.exports = {
     entry: './src/js/index.js',
     output: {
-        path: path.resolve(__dirname, '/dist'),
-        filename: 'index.js',
+        path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
+        publicPath: ""
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
