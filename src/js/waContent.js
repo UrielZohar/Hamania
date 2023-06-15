@@ -21,8 +21,7 @@ const createWaMsg = (items) => {
   price = price.toFixed(2);
   return `שלום יוסיאל 🥜%0a
 אני רוצה:%0a
-${message}
-סה״כ: ${price} ש״ח%0a
+${message}%0a
     😀`
   ;
 }
