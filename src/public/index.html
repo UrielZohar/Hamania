@@ -9,15 +9,22 @@
   <title>פיצוחי חמניה</title>
 </head>
 
-<body>
+<body class="desktop-mode">
   <div class="row section section-top-static">
-    <div class="wa-icon flex-item">
-      <a href="www.google.com" class="wa-link">
-        <img src="../assets/wa.png" />
-      </a>
+    <div class="top-wrapper">
+      <div class="wa-icon flex-item">
+        <a href="www.google.com" class="wa-link">
+          <img src="../assets/wa.png">
+        </a>
+      </div>
+      <div class="logo-brand flex-item">
+        <img src="../assets/logo.png">
+      </div>
     </div>
-    <div class="logo-brand flex-item">
-      <img src="../assets/logo.png" />
+    <div class="clear-selection">
+      <div class="button-clear-selection-wrapper">
+        <button onclick="clearSelection();">🗑 נקה בחירה</button>
+      </div>
     </div>
   </div>
   <div class="container">
@@ -28,9 +35,9 @@
             <h1>🥜 קלויים</h1>
           </div>
           <div class="list roasted-list">
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-0">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">גרעיני חמניה במליחות עדינה</span>
               </label>
               <span class="price">2.9 ש"ח</span>
@@ -42,9 +49,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-1">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">גרעיני חמניה מלוח</span>
               </label>
               <span class="price">2.9 ש"ח</span>
@@ -56,9 +63,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-2">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">גרעיני אבטיח מחבת</span>
               </label>
               <span class="price">5.5 ש"ח</span>
@@ -70,9 +77,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-3">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">גרעיני אבטיח מלוח</span>
               </label>
               <span class="price">5.5 ש"ח</span>
@@ -84,9 +91,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-4">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">גרעינים לבנים (דלעת)</span>
               </label>
               <span class="price">5.8 ש"ח</span>
@@ -98,9 +105,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-5">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">בוטנים קלויים</span>
               </label>
               <span class="price">3.9 ש"ח</span>
@@ -112,9 +119,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-6">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">פיסטוק קלוי</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -126,9 +133,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-7">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">שקד קלוי</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -140,9 +147,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-8">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קשיו קלוי</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -154,9 +161,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-9">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">בונדוק (אגוז לוז) קלוי</span>
               </label>
               <span class="price">7.8 ש"ח</span>
@@ -168,9 +175,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-10">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">פיסטוק טורקי קלוי</span>
               </label>
               <span class="price">9.9 ש"ח</span>
@@ -182,9 +189,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-11">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מיקס קלויים ללא מלח</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -196,9 +203,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-12">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">פקאן קלוי</span>
               </label>
               <span class="price">11.5 ש"ח</span>
@@ -210,9 +217,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-13">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קשיו מטובל</span>
               </label>
               <span class="price">8.9 ש"ח</span>
@@ -224,9 +231,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-14">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קשיו מטובל שום ובצל</span>
               </label>
               <span class="price">8.9 ש"ח</span>
@@ -238,9 +245,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-15">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קשיו קלוי עם קליפה</span>
               </label>
               <span class="price">8.9 ש"ח</span>
@@ -252,9 +259,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item roasted-list-item">
+            <div class="list-item roasted-list-item" id="list-item-16">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מקדמיה קלוי</span>
               </label>
               <span class="price">17 ש"ח</span>
@@ -273,9 +280,9 @@
             <h1>🥫 מנצ'סים ומיוחדים</h1>
           </div>
           <div class="list manchez-list">
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-17">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">בוטן ישראלי מטוגן</span>
               </label>
               <span class="price">5.9 ש"ח</span>
@@ -287,9 +294,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-18">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">שקד מעושן</span>
               </label>
               <span class="price">12 ש"ח</span>
@@ -301,9 +308,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-19">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מיקס מתוק מלוח</span>
               </label>
               <span class="price">11 ש"ח</span>
@@ -315,9 +322,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-20">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מיקס ירושלמי</span>
               </label>
               <span class="price">9.9 ש"ח</span>
@@ -329,9 +336,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-21">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">תערובת טקסס</span>
               </label>
               <span class="price">11 ש"ח</span>
@@ -343,9 +350,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-22">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מיקס ברביקיו</span>
               </label>
               <span class="price">11 ש"ח</span>
@@ -357,9 +364,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-23">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">טוייסט פפריקה</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -371,9 +378,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-24">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קבוקים</span>
               </label>
               <span class="price">3.5 ש"ח</span>
@@ -385,9 +392,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-25">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קבוקים םיקנטי</span>
               </label>
               <span class="price">4.5 ש"ח</span>
@@ -399,9 +406,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-26">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">בוטן אמריקאי</span>
               </label>
               <span class="price">3.5 ש"ח</span>
@@ -413,9 +420,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-27">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">חומוס קלוי</span>
               </label>
               <span class="price">4.9 ש"ח</span>
@@ -427,9 +434,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-28">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">תירס קלוי</span>
               </label>
               <span class="price">5.5 ש"ח</span>
@@ -441,9 +448,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-29">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">פול צ'יפס</span>
               </label>
               <span class="price">5.5 ש"ח</span>
@@ -455,9 +462,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-30">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">פול מתובל שום</span>
               </label>
               <span class="price">5.9 ש"ח</span>
@@ -469,9 +476,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-31">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">פול קליפה</span>
               </label>
               <span class="price">5.5 ש"ח</span>
@@ -483,9 +490,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-32">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">אפונה קלוי</span>
               </label>
               <span class="price">5 ש"ח</span>
@@ -497,9 +504,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-33">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קרקר יפני</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -511,9 +518,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-34">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מנצ'ס הולנדי</span>
               </label>
               <span class="price">6.5 ש"ח</span>
@@ -525,9 +532,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-35">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">ריזוטו</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -539,9 +546,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-36">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קריספי סויה</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -553,9 +560,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-37">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">רביולי פלאפל</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -567,9 +574,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-38">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">רביולי ברביקיו</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -581,9 +588,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-39">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">בוטן קראנץ' ישראלי</span>
               </label>
               <span class="price">5.9 ש"ח</span>
@@ -595,9 +602,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-40">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מנצ'ס אוסטרלי</span>
               </label>
               <span class="price">9.9 ש"ח</span>
@@ -609,9 +616,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-41">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מיאסי תירס</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -623,9 +630,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-42">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">אלמנדוס</span>
               </label>
               <span class="price">5.5 ש"ח</span>
@@ -644,9 +651,9 @@
             <h1>🍌 טבעיים</h1>
           </div>
           <div class="list manchez-list">
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-43">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">אגוז מלך</span>
               </label>
               <span class="price">3.9 ש"ח</span>
@@ -658,9 +665,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-44">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">שקד טבעי</span>
               </label>
               <span class="price">5.9 ש"ח</span>
@@ -672,9 +679,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-45">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">פקאן טבעי</span>
               </label>
               <span class="price">9.5 ש"ח</span>
@@ -686,9 +693,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-46">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">בוטן טבעי</span>
               </label>
               <span class="price">2.8 ש"ח</span>
@@ -700,9 +707,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-47">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קשיו טבעי</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -714,9 +721,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-48">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">חמניה טבעי קלוף</span>
               </label>
               <span class="price">2.2 ש"ח</span>
@@ -728,9 +735,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-49">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">דלעת טבעי קלוף</span>
               </label>
               <span class="price">3.9 ש"ח</span>
@@ -742,9 +749,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-50">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">ג'עלה לסלט</span>
               </label>
               <span class="price">6.5 ש"ח</span>
@@ -756,9 +763,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-51">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">צנובר</span>
               </label>
               <span class="price">18 ש"ח</span>
@@ -770,9 +777,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-52">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">פיסטוק טבעי קלוף</span>
               </label>
               <span class="price">13.5 ש"ח</span>
@@ -784,9 +791,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-53">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">אגוז ברזיל טבעי</span>
               </label>
               <span class="price">8.9 ש"ח</span>
@@ -798,9 +805,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-54">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מקדמיה טבעי</span>
               </label>
               <span class="price">16 ש"ח</span>
@@ -812,9 +819,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-55">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">שקד חצוי טבעי</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -826,9 +833,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-56">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">שקד פרוס טבעי</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -840,9 +847,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-57">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">שקד גפרור טבעי</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -854,9 +861,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-58">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">שקד מלובן טבעי</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -868,9 +875,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-59">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">בונדוק טבעי קלוף</span>
               </label>
               <span class="price">6.8 ש"ח</span>
@@ -882,9 +889,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-60">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">בוטן חצוי קלוף</span>
               </label>
               <span class="price">3.5 ש"ח</span>
@@ -896,9 +903,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-61">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">ריזוטו</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -910,9 +917,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-62">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קריספי סויה</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -924,9 +931,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-63">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">רביולי פלאפל</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -938,9 +945,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-64">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">רביולי ברביקיו</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -952,9 +959,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-65">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">בוטן קראנץ' ישראלי</span>
               </label>
               <span class="price">5.9 ש"ח</span>
@@ -966,9 +973,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-66">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מנצ'ס אוסטרלי</span>
               </label>
               <span class="price">9.9 ש"ח</span>
@@ -980,9 +987,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-67">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מיאסי תירס</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -994,9 +1001,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-68">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">אלמנדוס</span>
               </label>
               <span class="price">5.5 ש"ח</span>
@@ -1015,9 +1022,9 @@
             <h1>🍒 פירות יבשים</h1>
           </div>
           <div class="list dry-fruits-list">
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-69">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">מנגו דל סוכר</span>
               </label>
               <span class="price">8.9 ש"ח</span>
@@ -1029,9 +1036,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-70">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">ג'ינג'ר דל סוכר</span>
               </label>
               <span class="price">4.9 ש"ח</span>
@@ -1043,9 +1050,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-71">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">אננס ללא סוכר</span>
               </label>
               <span class="price">9.9 ש"ח</span>
@@ -1057,9 +1064,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-72">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">דובדבן שחור איטלקי</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -1071,9 +1078,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-73">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">תפוח עץ טבעי ללא סוכר</span>
               </label>
               <span class="price">4.9 ש"ח</span>
@@ -1085,9 +1092,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-74">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">דובדבן אמרנה מסוכר</span>
               </label>
               <span class="price">4.5 ש"ח</span>
@@ -1099,9 +1106,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-75">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">אננס מסוכר</span>
               </label>
               <span class="price">4.9 ש"ח</span>
@@ -1113,9 +1120,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-76">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">רצועות תפוז איטלקי</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -1127,9 +1134,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-77">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">רצועות בננה ללא סוכר</span>
               </label>
               <span class="price">9.5 ש"ח</span>
@@ -1141,9 +1148,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-78">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">תאנים</span>
               </label>
               <span class="price">4.8 ש"ח</span>
@@ -1155,9 +1162,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-79">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">משמש</span>
               </label>
               <span class="price">5.5 ש"ח</span>
@@ -1169,9 +1176,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-80">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">רצועות קוקוס ללא סוכר</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -1183,9 +1190,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-81">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">תות דל סוכר</span>
               </label>
               <span class="price">8.9 ש"ח</span>
@@ -1197,9 +1204,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-82">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">רצועות קוקוס מסוכר</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -1211,9 +1218,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-83">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">קוקוס צ'יפס</span>
               </label>
               <span class="price">8.9 ש"ח</span>
@@ -1225,9 +1232,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-84">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">ג'וג'י ברי (כשרות רבנות)</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -1239,9 +1246,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-85">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">גולדן ברי</span>
               </label>
               <span class="price">12 ש"ח</span>
@@ -1253,9 +1260,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-86">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">רצועות פומלה ללא סוכר</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -1267,9 +1274,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-87">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">משמש אורגני ללא סוכר</span>
               </label>
               <span class="price">6.5 ש"ח</span>
@@ -1281,9 +1288,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-88">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">משמש אוזבקי ללא סוכר</span>
               </label>
               <span class="price">6.8 ש"ח</span>
@@ -1295,9 +1302,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-89">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">צימוק לבן</span>
               </label>
               <span class="price">3.5 ש"ח</span>
@@ -1309,9 +1316,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-90">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">צימוק חום</span>
               </label>
               <span class="price">2.9 ש"ח</span>
@@ -1323,9 +1330,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-91">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">צימוק לבן ג'מבו</span>
               </label>
               <span class="price">4.5 ש"ח</span>
@@ -1337,9 +1344,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-92">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">צימוק שחור ג'מבו</span>
               </label>
               <span class="price">4.5 ש"ח</span>
@@ -1351,9 +1358,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-93">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">תמרים מג'הול איכותיים</span>
               </label>
               <span class="price">4.9 ש"ח</span>
@@ -1365,9 +1372,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-94">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">חמוציות חצויות ללא סוכר</span>
               </label>
               <span class="price">5.9 ש"ח</span>
@@ -1379,9 +1386,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-95">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">חמוציות עם סוכר</span>
               </label>
               <span class="price">3.9 ש"ח</span>
@@ -1393,9 +1400,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-96">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">חמוציות שלמות טבעיות</span>
               </label>
               <span class="price">7.9 ש"ח</span>
@@ -1407,9 +1414,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-97">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">צימוק אוזבקי ללא סוכר</span>
               </label>
               <span class="price">6.9 ש"ח</span>
@@ -1421,9 +1428,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-98">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">דובדבן אמריקאי ללא סוכר</span>
               </label>
               <span class="price">9.9 ש"ח</span>
@@ -1435,9 +1442,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-99">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">שזיף ללא חרצן</span>
               </label>
               <span class="price">4.9 ש"ח</span>
@@ -1449,9 +1456,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-100">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">אומניה כחולה בלו ברי ללא סוכר</span>
               </label>
               <span class="price">12 ש"ח</span>
@@ -1463,9 +1470,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-101">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">פפאיה</span>
               </label>
               <span class="price">4 ש"ח</span>
@@ -1477,9 +1484,9 @@
                 <option value="5"> 500 גר'</option>
               </select>
             </div>
-            <div class="list-item list-item">
+            <div class="list-item list-item" id="list-item-102">
               <label class="item-label">
-                <input type="checkbox" name="checkbox" />
+                <input type="checkbox" name="checkbox">
                 <span class="label-text">לשוניות אננס בצבעים</span>
               </label>
               <span class="price">4.5 ש"ח</span>
@@ -1497,9 +1504,9 @@
               <h1>🍫 נוספים</h1>
             </div>
             <div class="list others-list">
-              <div class="list-item list-item">
+              <div class="list-item list-item" id="list-item-103">
                 <label class="item-label">
-                  <input type="checkbox" name="checkbox" />
+                  <input type="checkbox" name="checkbox">
                   <span class="label-text">גומי ומסטיקים מכל הסוגים והגדלים</span>
                 </label>
                 <span class="price">4.9 ש"ח</span>
@@ -1511,9 +1518,9 @@
                   <option value="5"> 500 גר'</option>
                 </select>
               </div>
-              <div class="list-item list-item">
+              <div class="list-item list-item" id="list-item-104">
                 <label class="item-label">
-                  <input type="checkbox" name="checkbox" />
+                  <input type="checkbox" name="checkbox">
                   <span class="label-text">שוקולד חלק ישראל בד"ץ</span>
                 </label>
                 <span class="price">7.9 ש"ח</span>
@@ -1525,9 +1532,9 @@
                   <option value="5"> 500 גר'</option>
                 </select>
               </div>
-              <div class="list-item list-item">
+              <div class="list-item list-item" id="list-item-105">
                 <label class="item-label">
-                  <input type="checkbox" name="checkbox" />
+                  <input type="checkbox" name="checkbox">
                   <span class="label-text">בקלאווה וכנאפה במשקל</span>
                 </label>
                 <span class="price">6.9 ש"ח</span>
@@ -1539,9 +1546,9 @@
                   <option value="5"> 500 גר'</option>
                 </select>
               </div>
-              <div class="list-item list-item">
+              <div class="list-item list-item" id="list-item-106">
                 <label class="item-label">
-                  <input type="checkbox" name="checkbox" />
+                  <input type="checkbox" name="checkbox">
                   <span class="label-text">סוגי זיתים שונים שרויים בזמן זית איכותי</span>
                 </label>
                 <span class="price">4.9 ש"ח</span>
@@ -1553,9 +1560,9 @@
                   <option value="5"> 500 גר'</option>
                 </select>
               </div>
-              <div class="list-item list-item">
+              <div class="list-item list-item" id="list-item-107">
                 <label class="item-label">
-                  <input type="checkbox" name="checkbox" />
+                  <input type="checkbox" name="checkbox">
                   <span class="label-text">חליטות תה בטעמים עם סוכר</span>
                 </label>
                 <span class="price">9.9 ש"ח</span>
@@ -1567,9 +1574,9 @@
                   <option value="5"> 500 גר'</option>
                 </select>
               </div>
-              <div class="list-item list-item">
+              <div class="list-item list-item" id="list-item-108">
                 <label class="item-label">
-                  <input type="checkbox" name="checkbox" />
+                  <input type="checkbox" name="checkbox">
                   <span class="label-text">חליטות תה בטעמים בלי סוכר</span>
                 </label>
                 <span class="price">11.9 ש"ח</span>
@@ -1590,5 +1597,4 @@
   </div>
   <script type="text/javascript" src="./main.bundle.js"></script>
 </body>
-
 </html>

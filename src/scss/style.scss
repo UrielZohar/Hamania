@@ -1,12 +1,17 @@
-
+:root {
+    --main-bg-color: #F7F7F7;
+    --list-width: 500px;
+    --list-width-mobile: 100%;
+}
 body {
-    background-color: #F7F7F7;
+    position: relative;
+    background-color: var(--main-bg-color);
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    padding: 5px;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
-    margin-top: 140px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,15 +41,23 @@ button, input, optgroup, select, textarea {
 }
 
 .section-top-static {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    background-color: #F7F7F7;
+    background-color: var(--main-bg-color);
     z-index: 9;
-    padding-bottom: 50px;
+    margin: 0 auto;
+    width: var(--list-width);
+    
+    .top-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .clear-selection {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
 
     .wa-icon {
         width: 150px;
@@ -92,11 +105,16 @@ button, input, optgroup, select, textarea {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
 .head-of-list {
     display: flex;
+    background-color: var(--main-bg-color);
     justify-content: center;
+    position: sticky;
+    top: 152px;
+    z-index: 9;
 }
 
 .list {
@@ -158,6 +176,10 @@ button, input, optgroup, select, textarea {
                 width: 55px;
             }
         }
+    }
+
+    .section-top-static {
+        width: var(--list-width-mobile);
     }
 
 }
