@@ -6,7 +6,7 @@ const onLoad = (isMobile) => {
   const items = loadSelectionFromLocalhost();
   items.forEach(item => {
     const element = document.getElementById(item.itemId);
-    element.querySelector(`.select-weight option[value="${item.itemWeightQuantity}"]`).selected = true;
+    element.querySelector(`.select-weight option[value="${item.itemWeightQuantity}"]`) && (element.querySelector(`.select-weight option[value="${item.itemWeightQuantity}"]`).selected = true);
     element.querySelector(`input[type="checkbox"]`).checked = true;
   });
   
