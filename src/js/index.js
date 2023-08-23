@@ -14,8 +14,8 @@ window.orderChange = (e) => {
   checkedInputsItems.forEach(checkedInputItem => {
     const checkedItem = checkedInputItem.closest('.list-item');
     const itemLabel = checkedItem.querySelector('label .label-text').innerHTML;
-    const itemWeight = checkedItem.querySelector('.select-weight option:checked').innerHTML;
-    const itemWeightQuantity = checkedItem.querySelector('.select-weight option:checked').value;
+    const itemWeight = checkedItem.querySelector('.select-weight option:checked')?.innerHTML || '';
+    const itemWeightQuantity = checkedItem.querySelector('.select-weight option:checked')?.value || '';
     const itemPrice = checkedItem.querySelector('.price').innerHTML;
     const itemId = checkedItem.getAttribute('id');
     items.push({
